@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:wndomains="http://www.ontologydesignpatterns.org/ont/wn/wn30/domains/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:adjsem="http://www.ontologydesignpatterns.org/ont/framenet/adjsem.owl#"
+    xmlns:wn30instances="http://www.ontologydesignpatterns.org/ont/wn/wn30/instances/"
+    xmlns:schema="http://www.ontologydesignpatterns.org/ont/wn/wn30/schema/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:tbox="http://www.ontologydesignpatterns.org/ont/framenet/tbox/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:frame="http://www.ontologydesignpatterns.org/ont/framenet/abox/frame/"
+    xmlns="http://www.ontologydesignpatterns.org/ont/framenet/sectivityschema.rdf#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://www.ontologydesignpatterns.org/ont/framenet/adjsem.owl">
+  <owl:Ontology rdf:about="">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >v1.0 by Aldo Gangemi</owl:versionInfo>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A schema for the processing and annotation of a simple adjective ontology that annotates WordNet words with a sectivity value. The schema is aligned to FrameNet and WordNet schemas.</rdfs:comment>
+  </owl:Ontology>
+  <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/wn/wn30/domains/WNDomain">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ProperAdjectiveSynset">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="IntersectiveAdjectiveSynset"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="SubsectiveAdjectiveSynset">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="FramedAdjectiveSynset"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="PolysemousAdjectiveDeclaration">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="UnframedAdjectiveSynset">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/wn/wn30/schema/AdjectiveSynset"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="AmbiguousIntSubAdjectiveSynset">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#FramedAdjectiveSynset"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/wn/wn30/schema/AdjectiveSynset">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/wn/wn30/schema/AdjectiveWordSense">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="UnframedAdjectiveWordSense">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/wn/wn30/schema/AdjectiveWordSense"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/wn/wn30/schema/Word">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/wn/wn30/schema/SuperSense">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="#FramedAdjectiveSynset">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/wn/wn30/schema/AdjectiveSynset"/>
+  </owl:Class>
+  <owl:Class rdf:ID="MetaphoricallyInducedAmbiguousAdjectiveSynset">
+    <rdfs:subClassOf rdf:resource="#AmbiguousIntSubAdjectiveSynset"/>
+  </owl:Class>
+  <owl:Class rdf:ID="PolysemousAdjectiveWithAmbiguousSectivity">
+    <rdfs:subClassOf rdf:resource="#PolysemousAdjectiveDeclaration"/>
+  </owl:Class>
+  <owl:Class rdf:ID="AmbiguousAdjective">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Adjective"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="PrivativeAdjectiveSynset">
+    <rdfs:subClassOf rdf:resource="#FramedAdjectiveSynset"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ProperAdjectiveWordSense">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/wn/wn30/schema/AdjectiveWordSense"/>
+  </owl:Class>
+  <owl:Class rdf:about="#IntersectiveAdjectiveSynset">
+    <rdfs:subClassOf rdf:resource="#FramedAdjectiveSynset"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/framenet/tbox/Frame">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ModallyAmbiguousSectivityAdjectiveSynset">
+    <rdfs:subClassOf rdf:resource="#FramedAdjectiveSynset"/>
+  </owl:Class>
+  <owl:Class rdf:ID="MonosemousAdjectiveDeclaration">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ModalAdjectiveSynset">
+    <rdfs:subClassOf rdf:resource="#FramedAdjectiveSynset"/>
+  </owl:Class>
+  <owl:Class rdf:ID="SimilarityFramedAdjectiveSynset">
+    <rdfs:subClassOf rdf:resource="#FramedAdjectiveSynset"/>
+  </owl:Class>
+  <owl:Class rdf:ID="PolysemousAdjectiveWithUniqueSectivity">
+    <rdfs:subClassOf rdf:resource="#PolysemousAdjectiveDeclaration"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Adjective">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="synsetOfPolyAdj"/>
+  <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/wn/wn30/domains/synsetDomain"/>
+  <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/wn/wn30/schema/similarTo"/>
+  <owl:ObjectProperty rdf:ID="frameOfPolyAdj"/>
+  <owl:ObjectProperty rdf:ID="synsetOfMonoAdj"/>
+  <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/wn/wn30/schema/antonymOf"/>
+  <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/wn/wn30/schema/lexname"/>
+  <owl:ObjectProperty rdf:ID="synSimilarityMatch">
+    <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/wn/wn30/schema/AdjectiveSynset"/>
+    <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/wn/wn30/schema/AdjectiveSynset"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="wordSenseOfMonoAdj"/>
+  <owl:ObjectProperty rdf:ID="wordSenseOfPolyAdj"/>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#closeMatch"/>
+  <owl:ObjectProperty rdf:ID="wsSiblingMatch">
+    <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/wn/wn30/schema/AdjectiveWordSense"/>
+    <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/wn/wn30/schema/AdjectiveWordSense"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/wn/wn30/schema/containsWordSense"/>
+  <owl:ObjectProperty rdf:ID="narrowerMatchViaAntonymy"/>
+  <owl:ObjectProperty rdf:ID="frameOfMonoAdj"/>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#narrowerMatch"/>
+  <owl:ObjectProperty rdf:ID="narrowerMatchViaSimilarity"/>
+  <owl:ObjectProperty rdf:ID="wsSimilarityMatch">
+    <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/wn/wn30/schema/AdjectiveWordSense"/>
+    <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/wn/wn30/schema/AdjectiveWordSense"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="ambiguousSectivityViaSimilarity">
+    <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/wn/wn30/schema/AdjectiveSynset"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.ontologydesignpatterns.org/ont/wn/wn30/schema/senseLabel"/>
+  <owl:DatatypeProperty rdf:ID="synsetSectivityViaSimilarity"/>
+  <owl:DatatypeProperty rdf:about="http://www.ontologydesignpatterns.org/ont/wn/wn30/schema/senseKey"/>
+  <owl:DatatypeProperty rdf:ID="properSynsetSectivity"/>
+  <owl:DatatypeProperty rdf:ID="ambiguousSectivity">
+    <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/wn/wn30/schema/AdjectiveSynset"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="synsetSectivity">
+    <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/wn/wn30/schema/AdjectiveSynset"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.ontologydesignpatterns.org/ont/wn/wn30/schema/gloss"/>
+  <owl:DatatypeProperty rdf:ID="synsetSectivityViaAntonymy"/>
+  <owl:DatatypeProperty rdf:ID="additionalSectivity">
+    <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/wn/wn30/schema/AdjectiveSynset"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="uniqueSectivity">
+    <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/wn/wn30/schema/AdjectiveSynset"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="frameSectivity">
+    <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/framenet/tbox/Frame"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="frameOtherFeature">
+    <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/framenet/tbox/Frame"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="otherFeature">
+    <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/wn/wn30/schema/AdjectiveSynset"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.ontologydesignpatterns.org/ont/wn/wn30/schema/synsetId"/>
+  <owl:AnnotationProperty rdf:ID="polyAdjectiveWithAmbiguousSectivityLabel"/>
+  <owl:AnnotationProperty rdf:ID="polyAdjectiveWithUniqueSectivityLabel"/>
+  <owl:AnnotationProperty rdf:ID="monoAdjectiveLabel"/>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->
