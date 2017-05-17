@@ -13,7 +13,6 @@ A series of statistics (e.g. number of triples, predicats, classes) are availabl
 </ul>
 
 <h2> License </h2>
-Framester is licensed under a Creative Commons Attribution-ShareAlike 3.0.
-
-You should have received a copy of the license along with this work.  If not, see https://creativecommons.org/licenses/by-nc-sa/3.0/
+Framester is released under the ”CC-BY 3.0” license. However we remark that some of the datasets included in Framester e.g., VerbNet, are transformations of existing non-linked data resources to linked data knowledge graphs. For these datasets the original license specification holds.
+You should have received a copy of the license along with this work.  If not, see http://creativecommons.org/licenses/by/3.0
 </html>
