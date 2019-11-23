@@ -5,7 +5,6 @@
 A series of statistics (e.g. number of triples, predicats, classes) are available at (https://w3id.org/framester/stats).</p>
 
 <ul>
-  <li>Framester ontology https://w3id.org/framester/schema/ </li>
 <li>Framester can be queried through SPARQL endpoint: https://w3id.org/framester/sparql  </li>
 <li>The Documentation and sample queries are available on: https://github.com/framester/Framester/wiki/Framester-Documentation. </li>
 <li>Word-Frame Disambiguation API is available here: https://w3id.org/framester </li>
